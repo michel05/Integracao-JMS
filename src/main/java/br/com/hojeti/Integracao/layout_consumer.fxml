@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox id="vBox" fx:controller="br.com.hojeti.Integracao.AplicationController" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="375.0" prefWidth="518.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TabPane layoutX="6.0" prefHeight="375.0" prefWidth="634.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Aplicação">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="470.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../logo_400x400.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Sincronizaçao CA">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="initSincronizacao" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Iniciar" />
+                              <TextArea fx:id="logSincronizacao" editable="false" layoutX="14.0" layoutY="49.0" prefHeight="289.0" prefWidth="611.0" text="teste" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Impressão de Cheques">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Iniciar" />
+                              <TextArea editable="false" layoutX="14.0" layoutY="49.0" prefHeight="282.0" prefWidth="610.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Configuração">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane layoutX="6.0" prefHeight="345.0" prefWidth="627.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Configuração Geral">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="316.0" prefWidth="569.0">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="26.0" text="Host de comunicaçao" />
+                                                <TextField layoutX="14.0" layoutY="43.0" prefHeight="25.0" prefWidth="578.0" />
+                                                <TextField layoutX="14.0" layoutY="96.0" />
+                                                <TextField layoutX="14.0" layoutY="208.0" prefHeight="25.0" prefWidth="383.0" />
+                                                <Label layoutX="14.0" layoutY="79.0" text="Usuário" />
+                                                <PasswordField layoutX="14.0" layoutY="152.0" />
+                                                <Label layoutX="14.0" layoutY="135.0" text="Senha" />
+                                                <Label layoutX="14.0" layoutY="191.0" text="Indetificador" />
+                                                <Button layoutX="14.0" layoutY="254.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Autenticar" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Sincronizaçao">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Label layoutX="20.0" layoutY="25.0" text="Fila de Sincronizaçao" />
+                                                <TextField layoutX="20.0" layoutY="42.0" prefHeight="25.0" prefWidth="444.0" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab text="Cheques">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField layoutX="20.0" layoutY="37.0" prefHeight="25.0" prefWidth="308.0" />
+                                                <Label layoutX="20.0" layoutY="20.0" text="Fila de Cheques" />
+                                                <Label layoutX="20.0" layoutY="78.0" text="Host impressão de cheque" />
+                                                <TextField layoutX="20.0" layoutY="95.0" prefHeight="25.0" prefWidth="584.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
